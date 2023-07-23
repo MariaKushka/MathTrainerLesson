@@ -236,9 +236,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVc-E6-BKG">
-                                <rect key="frame" x="50" y="50" width="61.666666666666657" height="35"/>
+                                <rect key="frame" x="50" y="50" width="71" height="38"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Back"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Back">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="TGB-I8-1RX" kind="unwind" unwindAction="unwindActionWithUnwinedSegue:" id="sku-kI-VRv"/>
                                 </connections>
@@ -306,6 +315,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uQD-IL-U2F"/>
+                    <connections>
+                        <outletCollection property="buttonsCollection" destination="jA8-2f-HwH" collectionClass="NSMutableArray" id="Ecl-BX-zb9"/>
+                        <outletCollection property="buttonsCollection" destination="LMM-TM-ItN" collectionClass="NSMutableArray" id="vlY-a4-9HW"/>
+                        <outletCollection property="buttonsCollection" destination="jA8-2f-HwH" collectionClass="NSMutableArray" id="2gm-C8-c0f"/>
+                        <outletCollection property="buttonsCollection" destination="LMM-TM-ItN" collectionClass="NSMutableArray" id="NZP-AB-jcw"/>
+                        <outletCollection property="buttonsCollection" destination="sVc-E6-BKG" collectionClass="NSMutableArray" id="0WN-NI-nXg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2P-M1-FYl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="TGB-I8-1RX" userLabel="Exit" sceneMemberID="exit"/>
